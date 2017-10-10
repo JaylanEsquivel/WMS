@@ -9,7 +9,7 @@
 
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>SB Admin - Start Bootstrap Template</title>
+    <title>Sistema de Almoxarifado</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{{url('vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
@@ -65,7 +65,15 @@
                   <a href="#" style=" color: rgba(255,255,255,.5) !important;">Rua</a>
               </li>
               <li>
-                <a href="#" style=" color: rgba(255,255,255,.5) !important;">Prateleira</a>
+                <a class="nav-link-collapse collapsed" style=" color: rgba(255,255,255,.5) !important;" data-toggle="collapse" href="#collapseMulti1Pra">Prateleira</a>
+                <ul class="sidenav-third-level collapse" id="collapseMulti1Pra" style="background:#0070c0 !important ">
+                  <li>
+                    <a href="#" style=" color: rgba(255,255,255,.5) !important;">Unidade</a>
+                  </li>
+                  <li>
+                    <a href="#" style=" color: rgba(255,255,255,.5) !important;">Andar</a>
+                  </li>
+                </ul>
               </li>
               <li>
                 <a href="#" style=" color: rgba(255,255,255,.5) !important;">Repositório</a>
@@ -92,7 +100,7 @@
           </li>
           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
             <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents5">
-              <i class="fa fa-fw fa-arrow-down"></i>
+              <i class="fa fa-fw fa-arrow-up"></i>
               <span class="nav-link-text">
                 Entrada</span>
             </a>
@@ -158,12 +166,12 @@
             </ul>
           </li>
           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
-            <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents6">
+            <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents10">
               <i class="fa fa-fw fa-cubes"></i>
               <span class="nav-link-text">
                 Áreas</span>
             </a>
-            <ul class="sidenav-second-level collapse" id="collapseComponents6" style="background:#0070c0 !important;">
+            <ul class="sidenav-second-level collapse" id="collapseComponents10" style="background:#0070c0 !important;">
               <li>
                 <a href="#" style=" color: rgba(255,255,255,.5) !important;">Registrar</a>
               </li>
@@ -573,15 +581,15 @@
                   <tr>
                     <td>Jorge</td>
                     <td>Manutenção</td>
-                    <td>Dorcente</td>
+                    <td>Docente</td>
                     <td>10/10/2017</td>
                     <td>10/10/2017</td>
                     <td>Alicate de Pressão</td>
                   </tr>
                   <tr>
-                    <td>Roberta</td>
+                    <td>Rosana</td>
                     <td>Quimica</td>
-                    <td>Dorcente</td>
+                    <td>Docente</td>
                     <td>09/10/2017</td>
                     <td>10/10/2017</td>
                     <td>Acetona P.A</td>
