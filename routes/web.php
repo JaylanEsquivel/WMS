@@ -1,9 +1,10 @@
 <?php
 
-Route::get('/', function () {
-    return view('principal');
-});
+Route::get('/', 'ViewController@exibirprincipal');
 Route::get('/principal', 'ViewController@exibirprincipal');
+
+Route::get('/rua', 'ViewController@view_registra_rua')->name('Registro-de-Rua');
+
 
 Auth::routes();
 

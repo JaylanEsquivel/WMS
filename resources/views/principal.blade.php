@@ -22,6 +22,8 @@
 
     <!-- Custom styles for this template -->
     <link href="{{url('css/sb-admin.css')}}" rel="stylesheet">
+    <link href="{{ url('css/style.css') }}" rel="stylesheet">
+
 
   </head>
 
@@ -34,18 +36,13 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav navbar-sidenav" style="background:#0070c0 !important ">
-             <!-- <div class="profile" style="padding-top: 10px; padding-bottom: 10px;">
-                  <div class="img-circle">
-                      <img src="{{url('img/almoxarifado.jpg')}}" width="45" height="45" title="jaylan" alt="jaylan"/>
-                  </div>
-                    <div>
-                        <span style="color: #fff; font-size: 15px">Jaylan</span><br>
-                        <span style="color: #fff">Administrador</span>
-                    </div>
-                  </div> -->
+          <ul class="navbar-nav navbar-sidenav" style="background:#0070c0 !important; overflow-y:hidden !important; ">
+              <div class="admin">
+                  <span class="nav-link-text text">Jaylan</span><br>
+                  <span class="nav-link-text text-two">Administrador</span>
+              </div>
           <li class="nav-item active" data-toggle="tooltip" data-placement="right" title="Dashboard">
-            <a class="nav-link" href="#" style="background:#0070c0 !important;">
+            <a class="nav-link" href="{{url('/')}}" style="background:#0070c0 !important;">
               <i class="fa fa-fw fa-dashboard"></i>
               <span class="nav-link-text">
                 Painel de Controle</span>
@@ -59,19 +56,16 @@
             </a>
             <ul class="sidenav-second-level collapse" id="collapseComponents" style="background:#0070c0 !important;">
               <li>
-                <a href="#" style=" color: rgba(255,255,255,.5) !important;">Local</a>
-              </li>
-              <li>
-                  <a href="#" style=" color: rgba(255,255,255,.5) !important;">Rua</a>
+                  <a href="{{url('/rua')}}" style=" color: rgba(255,255,255,.5) !important;">Rua</a>
               </li>
               <li>
                 <a class="nav-link-collapse collapsed" style=" color: rgba(255,255,255,.5) !important;" data-toggle="collapse" href="#collapseMulti1Pra">Prateleira</a>
                 <ul class="sidenav-third-level collapse" id="collapseMulti1Pra" style="background:#0070c0 !important ">
                   <li>
-                    <a href="#" style=" color: rgba(255,255,255,.5) !important;">Unidade</a>
+                    <a href="{{url('/unidade')}}" style=" color: rgba(255,255,255,.5) !important;">Unidade</a>
                   </li>
                   <li>
-                    <a href="#" style=" color: rgba(255,255,255,.5) !important;">Andar</a>
+                    <a href="{{url('/andar')}}" style=" color: rgba(255,255,255,.5) !important;">Andar</a>
                   </li>
                 </ul>
               </li>
@@ -331,282 +325,9 @@
     </nav>
 
     <div class="content-wrapper py-3">
-
-      <div class="container-fluid">
-
-        <!-- Breadcrumbs -->
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item">
-            <a href="#">Painel de Controle</a>
-          </li>
-          <li class="breadcrumb-item active">Principal</li>
-        </ol>
-
-        <!-- Icon Cards -->
-        <div class="row">
-          <div class="col-xl-3 col-sm-6 mb-3">
-            <div class="card text-white bg-primary o-hidden h-100">
-              <div class="card-body">
-                <div class="card-body-icon">
-                  <i class="fa fa-fw fa-bar-chart-o"></i>
-                </div>
-                <div class="mr-5">
-                  26 Relatórios!
-                </div>
-              </div>
-              <a href="#" class="card-footer text-white clearfix small z-1">
-                <span class="float-left">Mais detalhes</span>
-                <span class="float-right">
-                  <i class="fa fa-angle-right"></i>
-                </span>
-              </a>
-            </div>
-          </div>
-          <div class="col-xl-3 col-sm-6 mb-3">
-            <div class="card text-white bg-warning o-hidden h-100">
-              <div class="card-body">
-                <div class="card-body-icon">
-                  <i class="fa fa-fw fa-list"></i>
-                </div>
-                <div class="mr-5">
-                  11 Agendamento
-                </div>
-              </div>
-              <a href="#" class="card-footer text-white clearfix small z-1">
-                <span class="float-left">Mais detalhes</span>
-                <span class="float-right">
-                  <i class="fa fa-angle-right"></i>
-                </span>
-              </a>
-            </div>
-          </div>
-          <div class="col-xl-3 col-sm-6 mb-3">
-            <div class="card text-white bg-success o-hidden h-100">
-              <div class="card-body">
-                <div class="card-body-icon">
-                  <i class="fa fa-fw fa-plus"></i>
-                </div>
-                <div class="mr-5">
-                  123 Entradas!
-                </div>
-              </div>
-              <a href="#" class="card-footer text-white clearfix small z-1">
-                <span class="float-left">Mais detalhes</span>
-                <span class="float-right">
-                  <i class="fa fa-angle-right"></i>
-                </span>
-              </a>
-            </div>
-          </div>
-          <div class="col-xl-3 col-sm-6 mb-3">
-            <div class="card text-white bg-danger o-hidden h-100">
-              <div class="card-body">
-                <div class="card-body-icon">
-                  <i class="fa fa-fw fa-minus"></i>
-                </div>
-                <div class="mr-5">
-                  13 Saidas!
-                </div>
-              </div>
-              <a href="#" class="card-footer text-white clearfix small z-1">
-                <span class="float-left">Mais detalhes</span>
-                <span class="float-right">
-                  <i class="fa fa-angle-right"></i>
-                </span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Area Chart Example -->
-        <div class="card mb-3">
-          <div class="card-header">
-            <i class="fa fa-area-chart"></i>
-            Entradas de itens
-          </div>
-          <div class="card-body">
-            <canvas id="myAreaChart" width="100%" height="30"></canvas>
-          </div>
-          <div class="card-footer small text-muted">
-            Atualização 11:59 PM
-          </div>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-8">
-
-            <!-- Example Bar Chart Card -->
-            <div class="card mb-3">
-              <div class="card-header">
-                <i class="fa fa-bar-chart"></i>
-                Saida de itens
-              </div>
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-sm-8 my-auto">
-                    <canvas id="myBarChart" width="100" height="50"></canvas>
-                  </div>
-                  <!--<div class="col-sm-4 text-center my-auto">
-                    <div class="h4 mb-0 text-primary">$34,693</div>
-                    <div class="small text-muted">YTD Revenue</div>
-                    <hr>
-                    <div class="h4 mb-0 text-warning">$18,474</div>
-                    <div class="small text-muted">YTD Expenses</div>
-                    <hr>
-                    <div class="h4 mb-0 text-success">$16,219</div>
-                    <div class="small text-muted">YTD Margin</div>
-                  </div>-->
-                </div>
-              </div>
-              <div class="card-footer small text-muted">
-                Atualizaçao 11:59 PM
-              </div>
-            </div>
-
-            <!-- Card Columns Example Social Feed -->
-            
-            <hr class="mt-2">
-          </div>
-
-          <div class="col-lg-4">
-            <!-- Example Pie Chart Card -->
-            <div class="card mb-3">
-              <div class="card-header">
-                <i class="fa fa-pie-chart"></i>
-                Kabam Geral
-              </div>
-              <div class="card-body">
-                <canvas id="myPieChart" width="100%" height="100"></canvas>
-              </div>
-              <div class="card-footer small text-muted">
-                Atualização 11:59 PM
-              </div>
-            </div>
-            <!-- Example Notifications Card
-            <div class="card mb-3">
-              <div class="card-header">
-                <i class="fa fa-bell-o"></i>
-                Feed Example
-              </div>
-              <div class="list-group list-group-flush small">
-                <a href="#" class="list-group-item list-group-item-action">
-                  <div class="media">
-                    <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/45x45" alt="">
-                    <div class="media-body">
-                      <strong>David Miller</strong>
-                      posted a new article to
-                      <strong>David Miller Website</strong>.
-                      <div class="text-muted smaller">Today at 5:43 PM - 5m ago</div>
-                    </div>
-                  </div>
-                </a>
-                <a href="#" class="list-group-item list-group-item-action">
-                  <div class="media">
-                    <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/45x45" alt="">
-                    <div class="media-body">
-                      <strong>Samantha King</strong>
-                      sent you a new message!
-                      <div class="text-muted smaller">Today at 4:37 PM - 1hr ago</div>
-                    </div>
-                  </div>
-                </a>
-                <a href="#" class="list-group-item list-group-item-action">
-                  <div class="media">
-                    <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/45x45" alt="">
-                    <div class="media-body">
-                      <strong>Jeffery Wellings</strong>
-                      added a new photo to the album
-                      <strong>Beach</strong>.
-                      <div class="text-muted smaller">Today at 4:31 PM - 1hr ago</div>
-                    </div>
-                  </div>
-                </a>
-                <a href="#" class="list-group-item list-group-item-action">
-                  <div class="media">
-                    <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/45x45" alt="">
-                    <div class="media-body">
-                      <i class="fa fa-code-fork"></i>
-                      <strong>Monica Dennis</strong>
-                      forked the
-                      <strong>startbootstrap-sb-admin</strong>
-                      repository on
-                      <strong>GitHub</strong>.
-                      <div class="text-muted smaller">Today at 3:54 PM - 2hrs ago</div>
-                    </div>
-                  </div>
-                </a>
-                <a href="#" class="list-group-item list-group-item-action">
-                  View all activity...
-                </a>
-              </div>
-              <div class="card-footer small text-muted">
-                Updated yesterday at 11:59 PM
-              </div>
-            </div>
-          </div>
-        </div> -->
-       </div>
-
-        <!-- Example Tables Card -->
-        <div class="card mb-3">
-          <div class="card-header">
-            <i class="fa fa-table"></i>
-            Saidas em aberto.
-          </div>
-          <div class="card-body">
-            <div class="table-responsive">
-              <table class="table table-bordered" width="100%" id="dataTable" cellspacing="0">
-                <thead>
-                  <tr>
-                    <th>Nome</th>
-                    <th>Àrea</th>
-                    <th>Tipo</th>
-                    <th>Data de saida</th>
-                    <th>Data de Devolução</th>
-                    <th>Item</th>
-                  </tr>
-                </thead>
-                <tfoot>
-                  <tr>
-                    <th>Nome</th>
-                    <th>Àrea</th>
-                    <th>Tipo</th>
-                    <th>Data de saida</th>
-                    <th>Data de Devolução</th>
-                    <th>Item</th>
-                  </tr>
-                </tfoot>
-                <tbody>
-                  <tr>
-                    <td>Jorge</td>
-                    <td>Manutenção</td>
-                    <td>Docente</td>
-                    <td>10/10/2017</td>
-                    <td>10/10/2017</td>
-                    <td>Alicate de Pressão</td>
-                  </tr>
-                  <tr>
-                    <td>Rosana</td>
-                    <td>Quimica</td>
-                    <td>Docente</td>
-                    <td>09/10/2017</td>
-                    <td>10/10/2017</td>
-                    <td>Acetona P.A</td>
-                  </tr>
-                 
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <div class="card-footer small text-muted">
-            Atualizaçao 11:59 PM
-          </div>
-        </div>
-
-      </div>
-      <!-- /.container-fluid -->
-
+       @section('view')       
+       
+       @show
     </div>
     <!-- /.content-wrapper -->
 
