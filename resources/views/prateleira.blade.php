@@ -6,7 +6,7 @@
             <a href="#">Painel de Controle</a>
           </li>
           <li class="breadcrumb-item active">Registro</li>
-          <li class="breadcrumb-item active">Rua</li>
+          <li class="breadcrumb-item active">Prateleira</li>
         </ol>
       
       <div class="row">
@@ -18,8 +18,20 @@
               <form action="{{url('/funcionario/form_funcionario')}}" method="post" >
                 <input type="hidden" name="_token" value="{{csrf_token()}}"/>
                 <div class="form-group">
-                  <label for="nome">Numero da Rua:</label>
-                  <input type="text" class="form-control" id="nomeFunc" name="nomeFunc" placeholder="Ex: 1">
+                  <label for="nome">Nome da Prateleira:</label>
+                  <input type="text" class="form-control" id="nomeFunc" name="nomeFunc" placeholder="Ex: A">
+                </div>
+                <div class="form-group">
+                  <label for="nome">Quantidade de andares Prateleira:</label>
+                  <input type="text" class="form-control" id="nomeFunc" name="nomeFunc" placeholder="Ex: 5">
+                </div>
+                <div class="form-group">
+                  <label for="nome">Prateleira da Rua:</label>
+                  <select name="rua" class="form-control">
+                      <option value="">--- Selecione ---</option>
+                      <option value="1">RUA 1</option>
+                      <option value="2">RUA 2</option>
+                  </select>
                 </div>
                 <button type="submit" class="btn btn-success" onclick="cadastrado()">Cadastrar</button>
               </form>
@@ -41,24 +53,36 @@
                     <table class="table table-bordered" width="100%" cellspacing="0">
                       <thead>
                         <tr>
-                          <th>NOME DA RUA</th>
+                          <th>NOME DA PRATELEIRA</th>
+                          <th>QUANTIDADE DE ANDARES</th>
+                          <th>RUA</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
+                          <td>A</td>
+                          <td>1</td>
                           <td>RUA 1</td>
                         </tr>
                         <tr>
-                          <td>RUA 2</td>
+                          <td>B</td>
+                          <td>1</td>
+                          <td>RUA 1</td>
                         </tr>
                         <tr>
-                          <td>RUA 3</td>
+                          <td>C</td>
+                          <td>1</td>
+                          <td>RUA 1</td>
                         </tr>
                         <tr>
-                          <td>RUA 4</td>
+                          <td>D</td>
+                          <td>1</td>
+                          <td>RUA 1</td>
                         </tr>
                         <tr>
-                          <td>RUA 5</td>
+                          <td>E</td>
+                          <td>5</td>
+                          <td>RUA 1</td>
                         </tr>
                       </tbody>
                     </table>
@@ -68,6 +92,6 @@
               </div>
           </div>
       </div>
-      <a href="{{url('/rua/rua-config')}}" class="btn btn-warning btn-sm"><i class="fa fa-eye"></i> Visualizar todos registros</a>
+      <a href="{{url('/prateleira/prateleira-config')}}" class="btn btn-warning btn-sm"><i class="fa fa-eye"></i> Visualizar todos registros</a>
   </div>
   @endsection

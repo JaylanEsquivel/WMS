@@ -59,15 +59,7 @@
                   <a href="{{url('/rua')}}" style=" color: rgba(255,255,255,.5) !important;">Rua</a>
               </li>
               <li>
-                <a class="nav-link-collapse collapsed" style=" color: rgba(255,255,255,.5) !important;" data-toggle="collapse" href="#collapseMulti1Pra">Prateleira</a>
-                <ul class="sidenav-third-level collapse" id="collapseMulti1Pra" style="background:#0070c0 !important ">
-                  <li>
-                    <a href="{{url('/unidade')}}" style=" color: rgba(255,255,255,.5) !important;">Unidade</a>
-                  </li>
-                  <li>
-                    <a href="{{url('/andar')}}" style=" color: rgba(255,255,255,.5) !important;">Andar</a>
-                  </li>
-                </ul>
+                  <a href="{{url('/prateleira')}}" style=" color: rgba(255,255,255,.5) !important;">Prateleira</a>
               </li>
               <li>
                 <a href="#" style=" color: rgba(255,255,255,.5) !important;">Repositório</a>
