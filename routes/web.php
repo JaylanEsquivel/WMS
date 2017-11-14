@@ -16,7 +16,11 @@ Route::get('/prateleira/prateleira-config', 'ViewController@view_config_pratelei
 Route::get('/entrada', 'ViewController@view_registra_rua')->name('Entrada-de-produtos');
 
 // ROTAS DE ENTRADA E SAIDAS DE PRODUTOS/ITEM 
+// ROTAS DE ÁREAS 
 
+   Route::get('/area','ViewController@view_registra_area')->name('Registro-de-Area');
+   
+// ROTAS DE ÁREAS
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

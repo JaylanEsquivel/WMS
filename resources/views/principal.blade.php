@@ -159,7 +159,7 @@
             </a>
             <ul class="sidenav-second-level collapse" id="collapseComponents10" style="background:#0070c0 !important;">
               <li>
-                <a href="#" style=" color: rgba(255,255,255,.5) !important;">Registrar</a>
+                <a href="{{url('/area')}}" style=" color: rgba(255,255,255,.5) !important;">Registrar</a>
               </li>
               <li>
                   <a href="#" style=" color: rgba(255,255,255,.5) !important;">Visualizar</a>

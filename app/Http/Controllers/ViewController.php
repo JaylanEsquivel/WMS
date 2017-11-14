@@ -19,5 +19,8 @@ class ViewController {
     public function view_config_prateleira() {
         return view('config_prateleira');
     }
+    public function view_registra_area(){
+        return view ('area');
+    }
     
 }
