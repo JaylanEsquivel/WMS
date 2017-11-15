@@ -3,7 +3,7 @@
   <div class="container-fluid font">
         <ol class="breadcrumb">
           <li class="breadcrumb-item">
-            <a href="#">Painel de Controle</a>
+            <a href="{{url('/principal')}}">Painel de Controle</a>
           </li>
           <li class="breadcrumb-item active">Registro</li>
           <li class="breadcrumb-item active">Prateleira</li>
@@ -13,6 +13,9 @@
           <div class="col-lg-12 col-md-12">
                <div class="alert alert-success">
                      Resgistro cadastrado com sucesso.
+                </div>
+                <div class="alert alert-danger">
+                     Falha na inserção tente novamente ou solicite o suporte técnico.
                 </div>
             <div class="col-lg-12 col-md-12">
               <form action="{{url('/funcionario/form_funcionario')}}" method="post" >

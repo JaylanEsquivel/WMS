@@ -62,7 +62,7 @@
                   <a href="{{url('/prateleira')}}" style=" color: rgba(255,255,255,.5) !important;">Prateleira</a>
               </li>
               <li>
-                <a href="#" style=" color: rgba(255,255,255,.5) !important;">Repositório</a>
+                <a href="{{url('/repositorio')}}" style=" color: rgba(255,255,255,.5) !important;">Repositório</a>
               </li>
               <li>
                 <a href="#" style=" color: rgba(255,255,255,.5) !important;">Item</a>
@@ -151,20 +151,12 @@
               </li>
             </ul>
           </li>
-          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
-            <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents10">
+          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+            <a class="nav-link" href="{{url('/area')}}" style=" color: rgba(255,255,255,.5) !important;">
               <i class="fa fa-fw fa-cubes"></i>
               <span class="nav-link-text">
                 Áreas</span>
             </a>
-            <ul class="sidenav-second-level collapse" id="collapseComponents10" style="background:#0070c0 !important;">
-              <li>
-                <a href="{{url('/area')}}" style=" color: rgba(255,255,255,.5) !important;">Registrar</a>
-              </li>
-              <li>
-                  <a href="#" style=" color: rgba(255,255,255,.5) !important;">Visualizar</a>
-              </li>
-            </ul>
           </li>
           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
             <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents3">

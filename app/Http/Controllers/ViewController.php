@@ -19,8 +19,18 @@ class ViewController {
     public function view_config_prateleira() {
         return view('config_prateleira');
     }
+    public function view_registra_repositorio() {
+        return view('repositorio');
+    }
+    public function view_config_repositorio() {
+        return view('config_repositorio');
+    }
+    
     public function view_registra_area(){
         return view ('area');
+    }
+    public function view_config_area() {
+        return view('config_area');
     }
     
 }
