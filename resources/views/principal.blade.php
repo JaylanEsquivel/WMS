@@ -31,7 +31,7 @@
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
-      <a class="navbar-brand" href="#">Controle de Almoxarifado</a>
+      <a class="navbar-brand" href="{{url('/principal')}}">Controle de Almoxarifado</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -77,77 +77,25 @@
             </a>
             <ul class="sidenav-second-level collapse" id="collapseComponents1" style="background:#0070c0 !important;">
               <li>
-                <a href="#" style=" color: rgba(255,255,255,.5) !important;">Geral</a>
+                <a href="{{url('/inventario-geral')}}" style=" color: rgba(255,255,255,.5) !important;">Geral</a>
               </li>
               <li>
-                  <a href="#" style=" color: rgba(255,255,255,.5) !important;">Área Expecifica</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
-            <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents5">
-              <i class="fa fa-fw fa-arrow-up"></i>
-              <span class="nav-link-text">
-                Entrada</span>
-            </a>
-            <ul class="sidenav-second-level collapse" id="collapseComponents5" style="background:#0070c0 !important;">
-              <li>
-                <a href="#" style=" color: rgba(255,255,255,.5) !important;">Registrar</a>
-              </li>
-              <li>
-                  <a href="#" style=" color: rgba(255,255,255,.5) !important;">Visualizar</a>
+                  <a href="{{url('/inventario-area')}}" style=" color: rgba(255,255,255,.5) !important;">Área Expecifica</a>
               </li>
             </ul>
           </li>
           <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
             <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents4">
-              <i class="fa fa-fw fa-arrow-down"></i>
+              <i class="fa fa-fw fa-arrows-h"></i>
               <span class="nav-link-text">
-                Saida</span>
+                Requisições</span>
             </a>
             <ul class="sidenav-second-level collapse" id="collapseComponents4" style="background:#0070c0 !important;">
               <li>
-                <a href="#" style=" color: rgba(255,255,255,.5) !important;">Registrar</a>
+                <a href="{{url('/entrada')}}" style=" color: rgba(255,255,255,.5) !important;">Entrada de Item</a>
               </li>
               <li>
-                  <a href="#" style=" color: rgba(255,255,255,.5) !important;">Visualizar</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Components">
-            <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents6">
-              <i class="fa fa-fw fa-users"></i>
-              <span class="nav-link-text">
-                Usuários</span>
-            </a>
-            <ul class="sidenav-second-level collapse" id="collapseComponents6" style="background:#0070c0 !important;">
-              <li>
-                <a class="nav-link-collapse collapsed" style=" color: rgba(255,255,255,.5) !important;" data-toggle="collapse" href="#collapseMulti1USER">Registrar</a>
-                <ul class="sidenav-third-level collapse" id="collapseMulti1USER" style="background:#0070c0 !important ">
-                  <li>
-                    <a href="#" style=" color: rgba(255,255,255,.5) !important;">Funcionário</a>
-                  </li>
-                  <li>
-                    <a href="#" style=" color: rgba(255,255,255,.5) !important;">Professor(a)</a>
-                  </li>
-                  <li>
-                    <a href="#" style=" color: rgba(255,255,255,.5) !important;">Cordenador(a)</a>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a class="nav-link-collapse collapsed" style=" color: rgba(255,255,255,.5) !important;" data-toggle="collapse" href="#collapseMulti1VIEW">Visualizar</a>
-                <ul class="sidenav-third-level collapse" id="collapseMulti1VIEW" style="background:#0070c0 !important ">
-                  <li>
-                    <a href="#" style=" color: rgba(255,255,255,.5) !important;">Funcionário</a>
-                  </li>
-                  <li>
-                    <a href="#" style=" color: rgba(255,255,255,.5) !important;">Professor(a)</a>
-                  </li>
-                  <li>
-                    <a href="#" style=" color: rgba(255,255,255,.5) !important;">Cordenador(a)</a>
-                  </li>
-                </ul>
+                  <a href="{{url('/saida')}}" style=" color: rgba(255,255,255,.5) !important;">Saida de Item</a>
               </li>
             </ul>
           </li>
@@ -166,13 +114,10 @@
             </a>
             <ul class="sidenav-second-level collapse" id="collapseComponents3" style="background:#0070c0 !important;">
               <li>
-                <a href="#" style=" color: rgba(255,255,255,.5) !important;">Configurações</a>
+                <a href="{{url('/config-conta')}}" style=" color: rgba(255,255,255,.5) !important;">Configurações da Conta</a>
               </li>
               <li>
-                  <a href="#" style=" color: rgba(255,255,255,.5) !important;">Gerenciar usuários</a>
-              </li>
-              <li>
-                <a href="#" style=" color: rgba(255,255,255,.5) !important;">Ferramentas</a>
+                  <a href="{{url('/usuarios')}}" style=" color: rgba(255,255,255,.5) !important;">Gerenciar usuários</a>
               </li>
             </ul>
           </li>
@@ -185,46 +130,13 @@
             <ul class="sidenav-second-level collapse" id="collapseMulti" style="background:#0070c0 !important ">
               
               <li>
-                <a class="nav-link-collapse collapsed" style=" color: rgba(255,255,255,.5) !important;" data-toggle="collapse" href="#collapseMulti1">Entradas</a>
-                <ul class="sidenav-third-level collapse" id="collapseMulti1" style="background:#0070c0 !important ">
-                  <li>
-                    <a href="#" style=" color: rgba(255,255,255,.5) !important;">Semanal</a>
-                  </li>
-                  <li>
-                    <a href="#" style=" color: rgba(255,255,255,.5) !important;">Mensal</a>
-                  </li>
-                  <li>
-                    <a href="#" style=" color: rgba(255,255,255,.5) !important;">Anoal</a>
-                  </li>
-                </ul>
+                <a style=" color: rgba(255,255,255,.5) !important;" href="{{url('/relatorio-entrada')}}">Entradas</a>
               </li>
               <li>
-                <a class="nav-link-collapse collapsed" style=" color: rgba(255,255,255,.5) !important;" data-toggle="collapse" href="#collapseMulti2">Saidas</a>
-                <ul class="sidenav-third-level collapse" id="collapseMulti2" style="background:#0070c0 !important ">
-                  <li>
-                    <a href="#" style=" color: rgba(255,255,255,.5) !important;">Semanal</a>
-                  </li>
-                  <li>
-                    <a href="#" style=" color: rgba(255,255,255,.5) !important;">Mensal</a>
-                  </li>
-                  <li>
-                    <a href="#" style=" color: rgba(255,255,255,.5) !important;">Anoal</a>
-                  </li>
-                </ul>
+                <a style=" color: rgba(255,255,255,.5) !important;" href="{{url('/relatorio-saida')}}">Saidas</a>
               </li>
               <li>
-                <a class="nav-link-collapse collapsed" style=" color: rgba(255,255,255,.5) !important;" data-toggle="collapse" href="#collapseMulti3">Itens</a>
-                <ul class="sidenav-third-level collapse" id="collapseMulti3" style="background:#0070c0 !important ">
-                  <li>
-                    <a href="#" style=" color: rgba(255,255,255,.5) !important;">Semanal</a>
-                  </li>
-                  <li>
-                    <a href="#" style=" color: rgba(255,255,255,.5) !important;">Mensal</a>
-                  </li>
-                  <li>
-                    <a href="#" style=" color: rgba(255,255,255,.5) !important;">Anoal</a>
-                  </li>
-                </ul>
+                <a style=" color: rgba(255,255,255,.5) !important;" href="{{url('/relatorio-item')}}">Itens</a>
               </li>
  
             </ul>

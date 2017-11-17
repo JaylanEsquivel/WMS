@@ -69,6 +69,6 @@
               </div>
           </div>
       </div>
-      <a href="{{url('/prateleira')}}" class="btn btn-warning btn-sm"><i class="fa fa-arrow-circle-o-left"></i> Voltar</a>
+      <a href="{{url('/bloco')}}" class="btn btn-warning btn-sm"><i class="fa fa-arrow-circle-o-left"></i> Voltar</a>
   </div>
   @endsection

@@ -37,5 +37,50 @@ class ViewController {
     public function view_config_area() {
         return view('config_area');
     }
+    public function view_registra_usuarios(){
+        return view ('usuarios');
+    }
+    public function view_config_usuarios() {
+        return view('config_usuarios');
+    }
+    public function view_config_conta() {
+        return view('config_conta');
+    }
+    public function view_config_conta_editar() {
+        return view('config_conta_editar');
+    }
+    
+    // CONTROLE DE RELATORIOS
+    public function view_relatorio_entrada() {
+        return view('relatorio_entrada');
+    }
+    public function view_relatorio_saida() {
+        return view('relatorio_saida');
+    }
+    public function view_relatorio_item() {
+        return view('relatorio_item');
+    }
+        // CONTROLE DE RELATORIOS
+    // entradas e saidas
+    
+    public function view_entrada() {
+        return view('requisicao_entrada');
+    }
+    public function view_saida() {
+        return view('requisicao_saida');
+    }
+    
+    // entradas e saidas
+    // inventario
+    
+    public function view_inventario_geral() {
+        return view('inventario_geral');
+    }
+    public function view_inventario_area() {
+        return view('inventario_area');
+    }
+    
+    // inventario
+
     
 }

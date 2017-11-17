@@ -84,24 +84,36 @@
                     <table class="table table-bordered" width="100%" cellspacing="0">
                       <thead>
                         <tr>
-                          <th>item</th>
+                          <th>DESCRIÇÃO DO MATERIAL</th>
+                          <th>ÁREA</th>
+                          <th>LOCAL</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
-                          <td>RUA 1</td>
+                          <td>Alicate rh</td>
+                          <td>Segurança do trabalho</td>
+                          <td> 1 1 2 3</td>
                         </tr>
                         <tr>
-                          <td>RUA 2</td>
+                          <td>Alicate rh</td>
+                          <td>Segurança do trabalho</td>
+                          <td> 1 1 2 3</td>
                         </tr>
                         <tr>
-                          <td>RUA 3</td>
+                          <td>Alicate rh</td>
+                          <td>Segurança do trabalho</td>
+                          <td> 1 1 2 3</td>
                         </tr>
                         <tr>
-                          <td>RUA 4</td>
+                          <td>Alicate rh</td>
+                          <td>Segurança do trabalho</td>
+                          <td> 1 1 2 3</td>
                         </tr>
                         <tr>
-                          <td>RUA 5</td>
+                          <td>Alicate rh</td>
+                          <td>Segurança do trabalho</td>
+                          <td> 1 1 2 3</td>
                         </tr>
                       </tbody>
                     </table>
