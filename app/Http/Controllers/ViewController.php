@@ -13,11 +13,11 @@ class ViewController {
     public function view_config_rua() {
         return view('config_rua');
     }
-    public function view_registra_prateleira() {
-        return view('prateleira');
+    public function view_registra_bloco() {
+        return view('bloco');
     }
-    public function view_config_prateleira() {
-        return view('config_prateleira');
+    public function view_config_bloco() {
+        return view('config_bloco');
     }
     public function view_registra_repositorio() {
         return view('repositorio');
@@ -25,7 +25,12 @@ class ViewController {
     public function view_config_repositorio() {
         return view('config_repositorio');
     }
-    
+    public function view_registra_item() {
+        return view('item');
+    }
+    public function view_config_item() {
+        return view('config_item');
+    }
     public function view_registra_area(){
         return view ('area');
     }

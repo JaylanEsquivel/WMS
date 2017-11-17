@@ -6,7 +6,7 @@
             <a href="#">Painel de Controle</a>
           </li>
           <li class="breadcrumb-item active">Registro</li>
-          <li class="breadcrumb-item active">Rua</li>
+          <li class="breadcrumb-item active">Item</li>
           <li class="breadcrumb-item active">Listagem</li>
         </ol>
       <div class="row full">

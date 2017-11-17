@@ -21,7 +21,7 @@
               <form action="{{url('/funcionario/form_funcionario')}}" method="post" >
                 <input type="hidden" name="_token" value="{{csrf_token()}}"/>
                 <div class="form-group">
-                  <label for="nome">Numero da Rua:</label>
+                  <label for="nome">Rua:</label>
                   <input type="text" class="form-control" id="nomeFunc" name="nomeFunc" placeholder="Ex: 1">
                 </div>
                 <button type="submit" class="btn btn-success" onclick="cadastrado()">Cadastrar</button>
@@ -44,7 +44,7 @@
                     <table class="table table-bordered" width="100%" cellspacing="0">
                       <thead>
                         <tr>
-                          <th>NOME DA RUA</th>
+                          <th>RUA</th>
                         </tr>
                       </thead>
                       <tbody>

@@ -25,7 +25,7 @@
                       <thead>
                         <tr>
                           <th>CODIGO DO REPOSITÓRIO</th>
-                          <th>NOME DA PRATELEIRA</th>
+                          <th>NUMERO DO BLOCO</th>
                           <th>NUMERO DO ANDAR</th> 
                           <th>AÇÕES</th>
                         </tr>

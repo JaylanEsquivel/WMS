@@ -59,13 +59,13 @@
                   <a href="{{url('/rua')}}" style=" color: rgba(255,255,255,.5) !important;">Rua</a>
               </li>
               <li>
-                  <a href="{{url('/prateleira')}}" style=" color: rgba(255,255,255,.5) !important;">Prateleira</a>
+                  <a href="{{url('/bloco')}}" style=" color: rgba(255,255,255,.5) !important;">Bloco</a>
               </li>
               <li>
                 <a href="{{url('/repositorio')}}" style=" color: rgba(255,255,255,.5) !important;">Repositório</a>
               </li>
               <li>
-                <a href="#" style=" color: rgba(255,255,255,.5) !important;">Item</a>
+                <a href="{{url('/item')}}" style=" color: rgba(255,255,255,.5) !important;">Item</a>
               </li>
             </ul>
           </li>
@@ -361,6 +361,10 @@
 
     <!-- Custom scripts for this template -->
     <script src="{{url('js/sb-admin.min.js')}}"></script>
+    
+     @section('js')       
+       
+     @show
 
   </body>
 

@@ -6,7 +6,7 @@
             <a href="{{url('/principal')}}">Painel de Controle</a>
           </li>
           <li class="breadcrumb-item active">Registro</li>
-          <li class="breadcrumb-item active">Repositório</li>
+          <li class="breadcrumb-item active">Item</li>
         </ol>
       
       <div class="row">
@@ -21,29 +21,47 @@
               <form action="{{url('/funcionario/form_funcionario')}}" method="post" >
                 <input type="hidden" name="_token" value="{{csrf_token()}}"/>
                 <div class="form-group">
-                  <label for="nome">Repositório:</label>
-                  <input type="text" class="form-control" id="nomeFunc" name="nomeFunc" placeholder="Ex: 8">
+                  <label for="nome">Descrição do Material:</label>
+                  <input type="text" class="form-control" id="nomeFunc" name="nomeFunc" placeholder="Ex: 1">
                 </div>
                 <div class="form-group">
-                  <label for="nome">Descrição do Repositório:</label>
-                  <input type="text" class="form-control" id="nomeFunc" name="nomeFunc" placeholder="Ex: Caixa">
-                </div>
-                <div class="form-group">
-                  <label for="nome">Repositório do Bloco:</label>
+                  <label for="nome">Area Associada:</label>
                   <select name="rua" class="form-control">
                       <option value="">--- Selecione ---</option>
-                      <option value="1">A</option>
-                      <option value="2">B</option>
+                      <option value="1">Quimica</option>
+                      <option value="2">Automação</option>
+                      <option value="2">Manutenção</option>
+                      <option value="2">Informática</option>
                   </select>
                 </div>
                 <div class="form-group">
-                  <label for="nome">Numero do andar:</label>
-                  <select name="rua" class="form-control">
+                  <label for="nome">Rua:</label>
+                  <select name="rua" class="form-control" id="01">
                       <option value="">--- Selecione ---</option>
                       <option value="1">1</option>
                       <option value="2">2</option>
+                      <option value="2">3</option>
                       <option value="2">4</option>
-                      <option value="2">5</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="nome">Bloco:</label>
+                  <select name="rua" class="form-control" id="02" disabled>
+                      <option value="">--- Selecione ---</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="2">3</option>
+                      <option value="2">4</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="nome">repositorio:</label>
+                  <select name="rua" class="form-control" id="03" disabled>
+                      <option value="">--- Selecione ---</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="2">3</option>
+                      <option value="2">4</option>
                   </select>
                 </div>
                 <button type="submit" class="btn btn-success" onclick="cadastrado()">Cadastrar</button>
@@ -66,36 +84,24 @@
                     <table class="table table-bordered" width="100%" cellspacing="0">
                       <thead>
                         <tr>
-                          <th>REPOSITÓRIO</th>
-                          <th>BLOCO</th>
-                          <th>NUMERO DO ANDAR</th>
+                          <th>item</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
-                          <td>ABC1</td>
-                          <td>A</td>
-                          <td>1</td>
+                          <td>RUA 1</td>
                         </tr>
                         <tr>
-                          <td>ABC2</td>
-                          <td>A</td>
-                          <td>2</td>
+                          <td>RUA 2</td>
                         </tr>
                         <tr>
-                          <td>CDV1</td>
-                          <td>A</td>
-                          <td>3</td>
+                          <td>RUA 3</td>
                         </tr>
                         <tr>
-                          <td>RRE2</td>
-                          <td>A</td>
-                          <td>4</td>
+                          <td>RUA 4</td>
                         </tr>
                         <tr>
-                          <td>RPV5</td>
-                          <td>A</td>
-                          <td>5</td>
+                          <td>RUA 5</td>
                         </tr>
                       </tbody>
                     </table>
@@ -105,6 +111,20 @@
               </div>
           </div>
       </div>
-      <a href="{{url('/repositorio/repositorio-config')}}" class="btn btn-warning btn-sm"><i class="fa fa-eye"></i> Visualizar todos registros</a>
+      <a href="{{url('/item/item-config')}}" class="btn btn-warning btn-sm"><i class="fa fa-eye"></i> Visualizar todos registros</a>
   </div>
+  @endsection
+  @section('js')
+  <script>
+     $(document).ready(function() {
+        $('#01').on('change', function() {
+          var $this = $(this);
+          var nextSelect = $this.next().closest('select');
+          if (nextSelect.is(':enabled')) {
+            return false;
+          }
+          nextSelect.removeAttr('disabled');
+        });
+    });
+</script>
   @endsection
