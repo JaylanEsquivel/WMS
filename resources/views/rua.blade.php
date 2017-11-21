@@ -11,18 +11,24 @@
       
       <div class="row">
           <div class="col-lg-12 col-md-12">
-                <div class="alert alert-success">
+                <div class="alert alert-success" id="alert">
                      Resgistro cadastrado com sucesso.
+                     <div class="pull-right">
+                         <a href="#" id="sair" onclick="fechar()"><img src="{{url('/img/x.png')}}" class="img-responsive" width="20"/></a>
+                     </div>
                 </div>
-                <div class="alert alert-danger">
+                <div class="alert alert-danger" id="alert1">
                      Falha na inserção tente novamente ou solicite o suporte técnico.
+                     <div class="pull-right">
+                         <a href="#" id="sair1" onclick="fechar()"><img src="{{url('/img/x.png')}}" class="img-responsive" width="20"/></a>
+                     </div>                
                 </div>
             <div class="col-lg-12 col-md-12">
-              <form action="{{url('/funcionario/form_funcionario')}}" method="post" >
+              <form action="{{url('/rua/form_rua')}}" method="post" >
                 <input type="hidden" name="_token" value="{{csrf_token()}}"/>
                 <div class="form-group">
                   <label for="nome">Rua:</label>
-                  <input type="text" class="form-control" id="nomeFunc" name="nomeFunc" placeholder="Ex: 1">
+                  <input type="text" class="form-control" id="rua" name="rua" placeholder="Ex: 1">
                 </div>
                 <button type="submit" class="btn btn-success" onclick="cadastrado()">Cadastrar</button>
               </form>
@@ -48,23 +54,14 @@
                         </tr>
                       </thead>
                       <tbody>
+                      @foreach ($produto as $p)
                         <tr>
-                          <td>RUA 1</td>
+                          <td>{{$p->nome}}</td>
                         </tr>
-                        <tr>
-                          <td>RUA 2</td>
-                        </tr>
-                        <tr>
-                          <td>RUA 3</td>
-                        </tr>
-                        <tr>
-                          <td>RUA 4</td>
-                        </tr>
-                        <tr>
-                          <td>RUA 5</td>
-                        </tr>
+                      @endforeach 
                       </tbody>
                     </table>
+                      {{ $produto->links() }}
                   </div>
                 </div>
                 <div class="card-footer small text-muted">Nova Atualização {{date('Y')}}</div>

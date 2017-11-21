@@ -1,11 +1,23 @@
 <?php
 
-Route::get('/', 'ViewController@exibirprincipal');
+Route::get('/original', function () {
+    return view('welcome');
+});
+Route::get('/', function () {
+    return view('/auth/login');
+});
+Route::get('/home', 'ViewController@exibirprincipal')->name('Index');
+
+//Route::get('/', 'ViewController@exibirprincipal');
 Route::get('/principal', 'ViewController@exibirprincipal');
 
+// get
+Route::get('/local', 'LocationsController@local_registrar')->name('Registro-de-Local');
 
 Route::get('/rua', 'ViewController@view_registra_rua')->name('Registro-de-Rua');
 Route::get('/rua/rua-config', 'ViewController@view_config_rua')->name('Config-de-rua');
+Route::get('/rua/rua-config/editar-rua/{id}', 'ViewController@view_editar_rua')->name('Editar-rua');
+
 
 Route::get('/bloco', 'ViewController@view_registra_bloco')->name('Registro-de-bloco');
 Route::get('/bloco/bloco-config', 'ViewController@view_config_bloco')->name('Config-de-bloco');
@@ -21,10 +33,11 @@ Route::get('/usuarios/usuarios-config', 'ViewController@view_config_usuarios')->
 
 Route::get('/config-conta', 'ViewController@view_config_conta')->name('Config-de-Conta');
 Route::get('/config-conta/editar-conta', 'ViewController@view_config_conta_editar')->name('Config-de-Conta-editar');
+//post
 
-// ROTAS DE ENTRADA E SAIDAS DE PRODUTOS/ITEM 
+Route::post('/local/form_Local', 'LocationsController@cadastro_local');
+Route::post('/rua/rua-config/editar-rua/update/{id}', 'ViewController@rua_form_editar');
 
-Route::get('/entrada', 'ViewController@view_registra_rua')->name('Entrada-de-produtos');
 
 // ROTAS DE ENTRADA E SAIDAS DE PRODUTOS/ITEM 
 // ROTAS DE ÁREAS 
@@ -37,7 +50,7 @@ Route::get('/area/area-config', 'ViewController@view_config_area')->name('Config
 
 Route::get('/entrada','ViewController@view_entrada')->name('Entrada-item');
 Route::get('/saida','ViewController@view_saida')->name('Saida-item');
- 
+Route::get('/saida/saida-registros','ViewController@view_saida_registros')->name('Saida-registro');
 // ROTAS DE entrada/saida
 // ROTAS DE INVENTARIO
 
@@ -54,5 +67,3 @@ Route::get('/relatorio-item','ViewController@view_relatorio_item')->name('Relato
 
 // ROTAS DE RELÁTORIOS 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

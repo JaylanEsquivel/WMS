@@ -23,6 +23,7 @@
     <!-- Custom styles for this template -->
     <link href="{{url('css/sb-admin.css')}}" rel="stylesheet">
     <link href="{{ url('css/style.css') }}" rel="stylesheet">
+    <script src="{{url("js/respostas.js")}}"></script>
 
 
   </head>
@@ -38,8 +39,8 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav navbar-sidenav" style="background:#0070c0 !important; overflow-y:hidden !important; ">
               <div class="admin">
-                  <span class="nav-link-text text">Jaylan</span><br>
-                  <span class="nav-link-text text-two">Administrador</span>
+                  <span class="nav-link-text text">{{ Auth::user()->name }}</span><br>
+                  <!--<span class="nav-link-text text-two">Administrador</span>-->
               </div>
           <li class="nav-item active" data-toggle="tooltip" data-placement="right" title="Dashboard">
             <a class="nav-link" href="{{url('/')}}" style="background:#0070c0 !important;">
@@ -52,10 +53,13 @@
             <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseComponents">
               <i class="fa fa-plus fw"></i>
               <span class="nav-link-text">
-                 Registra</span>
+                 Registro</span>
             </a>
             <ul class="sidenav-second-level collapse" id="collapseComponents" style="background:#0070c0 !important;">
               <li>
+                  <a href="{{url('/local')}}" style=" color: rgba(255,255,255,.5) !important;">Local</a>
+              </li>
+            <!--  <li>
                   <a href="{{url('/rua')}}" style=" color: rgba(255,255,255,.5) !important;">Rua</a>
               </li>
               <li>
@@ -63,7 +67,7 @@
               </li>
               <li>
                 <a href="{{url('/repositorio')}}" style=" color: rgba(255,255,255,.5) !important;">Repositório</a>
-              </li>
+              </li> -->
               <li>
                 <a href="{{url('/item')}}" style=" color: rgba(255,255,255,.5) !important;">Item</a>
               </li>
@@ -215,7 +219,7 @@
             <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
               <i class="fa fa-fw fa-sign-out"></i>
               Logout</a>
-          </li>
+          </li>          
         </ul>
       </div>
     </nav>
@@ -244,17 +248,21 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <h5 class="modal-title" id="exampleModalLabel">Deseja realmente sair?</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
-            Select "Logout" below if you are ready to end your current session.
+            Selecione "Sair" abaixo se você estiver pronto para terminar sua sessão atual.
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-            <a class="btn btn-primary" href="login.html">Logout</a>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            <!--<a class="btn btn-primary" href="{{ url('logout') }}">Sair</a>-->
+                    <a class="btn btn-danger" href="{{ url('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Sair</a>
+                    <form id="logout-form" action="{{ url('logout') }}" method="POST" style="display: none;">
+                        {{ csrf_field() }}
+                    </form>
           </div>
         </div>
       </div>
@@ -277,6 +285,21 @@
      @section('js')       
        
      @show
+     
+<script>
+     $(document).ready(function fechar() {
+        $('#sair').click(function(){
+            $('#alert').css("display","none");
+        })
+    });
+</script>
+<script>
+     $(document).ready(function fechar() {
+        $('#sair1').click(function(){
+            $('#alert1').css("display","none");
+        })
+    });
+</script>
 
   </body>
 

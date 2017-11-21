@@ -25,3 +25,9 @@
         border-radius: .25rem;
         color: #fff;
 }
+a{
+    text-decoration: none;
+}
+#alert,#alert1{
+    display: block;
+}

@@ -11,11 +11,17 @@
       
       <div class="row">
           <div class="col-lg-12 col-md-12">
-                <div class="alert alert-success">
+              <div class="alert alert-success" id="alert">
                      Resgistro cadastrado com sucesso.
+                     <div class="pull-right">
+                         <a href="#" id="sair" onclick="fechar()"><img src="{{url('/img/x.png')}}" class="img-responsive" width="20"/></a>
+                     </div>
                 </div>
-                <div class="alert alert-danger">
+                <div class="alert alert-danger" id="alert1">
                      Falha na inserção tente novamente ou solicite o suporte técnico.
+                     <div class="pull-right">
+                         <a href="#" id="sair1" onclick="fechar()"><img src="{{url('/img/x.png')}}" class="img-responsive" width="20"/></a>
+                     </div>                
                 </div>
             <div class="col-lg-12 col-md-12">
               <form action="{{url('/funcionario/form_funcionario')}}" method="post" >
@@ -127,16 +133,5 @@
   </div>
   @endsection
   @section('js')
-  <script>
-     $(document).ready(function() {
-        $('#01').on('change', function() {
-          var $this = $(this);
-          var nextSelect = $this.next().closest('select');
-          if (nextSelect.is(':enabled')) {
-            return false;
-          }
-          nextSelect.removeAttr('disabled');
-        });
-    });
-</script>
+  
   @endsection

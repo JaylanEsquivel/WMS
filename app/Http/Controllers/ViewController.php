@@ -1,18 +1,51 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Http\Controllers\Controller;
+use App\Models\Produto;
 
-class ViewController {
-
+class ViewController extends Controller {
+    
+    public function __construct() {
+        $this->middleware('auth');
+    }
+    
     public function exibirprincipal() {
         return view('dashboard');
     }
+    // rua com banco de dados teste
     public function view_registra_rua() {
+        //$produto = Produto::paginate(5); , ['produto' => $produto]
         return view('rua');
     }
     public function view_config_rua() {
+       // $produto = Produto::paginate(10);, ['produto' => $produto]
         return view('config_rua');
     }
+    public function rua_form() {
+        $rua = \Request::input('rua');
+        
+        $novo = new Produto;
+        $novo->nome = $rua;
+        $novo->save();
+        
+        return redirect('/rua');
+    }
+    public function view_editar_rua($id) {
+        //$rua = Produto::find($id);, ['rua' => $rua]
+        return view('editar_rua');
+    }
+    
+    public function rua_form_editar($id) {
+        /*$rua = Produto::find($id);
+        $nome = \Request::input('rua');
+        
+        $rua->nome = $nome;
+        $rua->save();
+        
+        return redirect('/rua/rua-config');*/
+    }
+    // rua com banco de dados teste
     public function view_registra_bloco() {
         return view('bloco');
     }
@@ -68,6 +101,9 @@ class ViewController {
     }
     public function view_saida() {
         return view('requisicao_saida');
+    }
+    public function view_saida_registros() {
+        return view('requisicao_saida_registros');
     }
     
     // entradas e saidas

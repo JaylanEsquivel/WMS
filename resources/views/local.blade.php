@@ -6,33 +6,50 @@
             <a href="{{url('/principal')}}">Painel de Controle</a>
           </li>
           <li class="breadcrumb-item active">Registro</li>
-          <li class="breadcrumb-item active">Área</li>
+          <li class="breadcrumb-item active">Local</li>
         </ol>
       
       <div class="row">
           <div class="col-lg-12 col-md-12">
+              @if(session()->has('msg'))
+                @if(session()->has('msg') == 1)
                 <div class="alert alert-success" id="alert">
-                     Resgistro cadastrado com sucesso.
+                     Registro cadastrado com sucesso.
                      <div class="pull-right">
                          <a href="#" id="sair" onclick="fechar()"><img src="{{url('/img/x.png')}}" class="img-responsive" width="20"/></a>
                      </div>
                 </div>
+                @else
                 <div class="alert alert-danger" id="alert1">
                      Falha na inserção tente novamente ou solicite o suporte técnico.
                      <div class="pull-right">
                          <a href="#" id="sair1" onclick="fechar()"><img src="{{url('/img/x.png')}}" class="img-responsive" width="20"/></a>
                      </div>                
                 </div>
+                @endif
+              @endif
+              
+              
             <div class="col-lg-12 col-md-12">
-              <form action="{{url('/funcionario/form_funcionario')}}" method="post" >
+              <form action="{{url('/local/form_Local')}}" method="post" >
                 <input type="hidden" name="_token" value="{{csrf_token()}}"/>
                 <div class="form-group">
-                  <label for="nome">Nome da Área:</label>
-                  <input type="text" class="form-control" id="nomeFunc" name="nomeFunc" placeholder="Ex: Química"><br>
-                  <label for="nome">Sigla:</label>
-                  <input type="text" class="form-control" id="nomeFunc" name="nomeFunc" placeholder="Ex: QUI">
+                  <label for="nome">Rua:</label>
+                  <input type="text" class="form-control" id="rua" name="rua" placeholder="Ex: 1">
                 </div>
-                <button type="submit" class="btn btn-success" onclick="cadastrado()">Cadastrar</button>
+                <div class="form-group">
+                  <label for="nome">Estande:</label>
+                  <input type="text" class="form-control" id="est" name="est" placeholder="Ex: 1">
+                </div>
+                <div class="form-group">
+                  <label for="nome">Prateleira:</label>
+                  <input type="text" class="form-control" id="pra" name="pra" placeholder="Ex: 1">
+                </div>
+                <div class="form-group">
+                  <label for="nome">Repositório:</label>
+                  <input type="text" class="form-control" id="rep" name="rep" placeholder="Ex: 1">
+                </div>
+                <button type="submit" class="btn btn-success">Cadastrar</button>
               </form>
             </div>
           </div>
@@ -52,31 +69,23 @@
                     <table class="table table-bordered" width="100%" cellspacing="0">
                       <thead>
                         <tr>
-                          <th>NOME DA ÁREA</th>
-                          <th>SIGLA</th>
+                          <th>RUA</th>
+                          <th>ESTANDE</th>
+                          <th>PRATELEIRA</th>
+                          <th>REPOSITORIO</th>
                         </tr>
                       </thead>
                       <tbody>
+                       @forelse($local as $l)
                         <tr>
-                          <td>Química</td>
-                          <td>QUI</td>
+                          <td>{{$l->street}}</td>
+                          <td>{{$l->shelf}}</td>
+                          <td>{{$l->floor}}</td>
+                          <td>{{$l->repository}}</td>
                         </tr>
-                        <tr>
-                          <td>Automação Industrial</td>
-                          <td>ATI</td>
-                        </tr>
-                        <tr>
-                          <td>Segurança do Trabalho</td>
-                          <td>SdT</td>
-                        </tr>
-                        <tr>
-                          <td>Infomática</td>
-                          <td>INF</td>
-                        </tr>
-                        <tr>
-                          <td>Mecânica</td>
-                          <td>MEC</td>
-                        </tr>
+                       @empty
+                       <tr><td>Nenhum registro cadastrado.</td></tr>
+                       @endforelse
                       </tbody>
                     </table>
                   </div>
@@ -85,6 +94,6 @@
               </div>
           </div>
       </div>
-      <a href="{{url('/area/area-config')}}" class="btn btn-warning btn-sm"><i class="fa fa-eye"></i> Visualizar todos registros</a>
+      <a href="{{url('/rua/rua-config')}}" class="btn btn-warning btn-sm"><i class="fa fa-eye"></i> Visualizar todos registros</a>
   </div>
   @endsection
